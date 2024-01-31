@@ -1,3 +1,5 @@
+// Given a string s, return the longest palindromic substring in s.
+
 public class longestPalindromSub {
     class Solution {
         public int palLength = 0 ;
