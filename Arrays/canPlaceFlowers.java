@@ -6,7 +6,8 @@ class Solution {
         int remainingFlowers = n ;
         Vector<Integer> adjustedFlowerArray = new Vector<>() ;
 
-       // Add a 0 at the start and end of the flowerbed to handle edge cases.
+        
+       // Create new array cause of special case
         adjustedFlowerArray.add(0);
         for (int flower : flowerbed) {
             adjustedFlowerArray.add(flower);
@@ -15,6 +16,7 @@ class Solution {
 
         int zeroCounter = 0 ;
 
+        // Check the zero pattern.
         for(int i = 0 ; i < adjustedFlowerArray.size() ; i++){
             if(adjustedFlowerArray.get(i) == 1){
                 zeroCounter = 0 ;
