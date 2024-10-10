@@ -1,13 +1,24 @@
-public class maximumSubArr {
-    class Solution {
-        public int maxSubArray(int[] nums) {
-            int maxVal = nums[0] ;
-            int maxSoFar = nums[0] ; 
-            for(int i = 1 ; i < nums.length ; i ++){
-                maxVal = Math.max(nums[i] , nums[i] + maxVal) ;
-                maxSoFar = Math.max(maxSoFar , maxVal) ;
-            }  
-            return maxSoFar ;
-        }
+class Solution {
+    public int maxSubArray(int[] nums) {
+
+        // Talk about my approach 
+        // What DS or Algorithm 
+        // Ask this sounds good
+        // Run through an example
+
+        int max = -10000 ;
+        int i = 0 ;
+        int sum = max ;
+
+        while( i < nums.length){
+            sum += nums[i] ;
+            if(sum <  nums[i]){ 
+                sum = nums[i] ;
+            }
+            max = Math.max(sum , max ) ;
+            i++ ; 
+        } 
+
+        return max ;
     }
 }
