@@ -1,4 +1,5 @@
 class Solution {
+    // Solves problem using dynamic Programming 
     public List<List<Integer>> permute(int[] nums) {
         if(nums.length == 0){
             List<List<Integer>> result = new ArrayList<>() ;
