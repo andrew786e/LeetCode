@@ -10,7 +10,7 @@ Welcome to my **LeetCode Solutions Repository**! 🚀 This repository contains m
 ## 📌 How to Use This Repository
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/leetcode-solutions.git
+   git clone https://github.com/andrew786e/LeetCode.git
    cd leetcode-solutions
    ```
 2. Browse solutions categorized by problem type.
