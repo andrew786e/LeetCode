@@ -1,28 +1,33 @@
 class Solution {
-    Map<Integer , Integer> storeValues = new HashMap<>() ;
+
+    private int[] stairs ;
 
     public int climbStairs(int n) {
-        int distinctPosition = dfs(n , 0) ;
-        return distinctPosition ;
+        stairs = new int[n] ;
+        Arrays.fill(stairs , -1) ;
+
+        return dfs(n , 0) ;
+
     }
 
-    public int dfs(int n , int currentPosition){
-        if(currentPosition == n){
-            return 1 ;
-        }
+    public int dfs(int n , int stair){
 
-        if(currentPosition > n ){
+        if(stair > n ){
             return 0 ;
         }
 
-        if(storeValues.containsKey(currentPosition)){
-            return storeValues.get(currentPosition) ;
+        if(stair == n){
+            return 1 ;
         }
 
-        int result = dfs(n , currentPosition + 1) + dfs(n , currentPosition + 2) ;
+        if(stairs[stair] >= 0){
+            return stairs[stair] ;
+        }
 
-        storeValues.put(currentPosition , result) ;
+        int path = dfs(n , stair + 1) + dfs(n , stair + 2) ;
+        stairs[stair] = path ;
 
-        return result ;
+        return path ;
     }
+
 }
